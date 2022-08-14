@@ -9,9 +9,12 @@
 Console.WriteLine("Введите пятизначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num / 10000 == num % 10 && (num / 1000) % 10 == (num % 100) / 10)
+if (num < 10000 || num > 99999) Console.WriteLine("Введенное число не является пятизначным.");
+else 
 {
-    Console.WriteLine("Введенное число - палиндром.");
+    if (num / 10000 == num % 10 && (num / 1000) % 10 == (num % 100) / 10)
+    {
+        Console.WriteLine("Введенное число - палиндром.");
+    }
+    else Console.WriteLine("Введенное число НЕ является палиндромом."); 
 }
-else Console.WriteLine("Введенное число НЕ является палиндромом."); 
-
